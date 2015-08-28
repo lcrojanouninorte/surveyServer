@@ -3,7 +3,7 @@ class CharacterizationsController < ApplicationController
 
   def index
     @characterizations = Characterization.all
-    respond_with(@characterizations)
+    render json: @characterizations
   end
 
   def show
@@ -26,7 +26,7 @@ class CharacterizationsController < ApplicationController
 
   def update
     @characterization.update(characterization_params)
-    respond_with(@characterization)
+    render json: @characterization
   end
 
   def destroy
