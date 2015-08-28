@@ -19,5 +19,5 @@ class Users::ConfirmationsController < Devise::ConfirmationsController
       redirect_to "http://www.onlinecolombia.tv/#home"
     else
       respond_with_navigational(resource.errors, status: :unprocessable_entity){ render :new }
-    e
+    end
 end
