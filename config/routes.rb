@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
   resources :characterizations, except: [:destroy]
-  devise_for :users
+  #devise_for :users
+  #devise_for :users, :controllers => {registrations: 'registrations'}
+  devise_for :users, controllers: {passwords: "users/passwords", confirmations: 'users/confirmations'}
+  devise_scope :user do
+    get '/confirmation-getting-started' => 'registrations#getting_started', as: 'confirmation_getting_started'
+  end
+
+  #resources :users, only: [:create]
+  post 'users/signup', :to => 'users#create'
+  post 'session/signin', :to => 'sessions#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

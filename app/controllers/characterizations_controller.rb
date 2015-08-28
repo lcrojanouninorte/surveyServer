@@ -19,10 +19,13 @@ class CharacterizationsController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:user_id])
     @characterization = Characterization.new(characterization_params)
-    @characterization.save
-    respond_with(@characterization)
+    if @characterization.save
+     render json: @characterization, status: :ok
+    else
+     render json: @characterization, status: :unprocessable_entity
+    end  
+
   end
 
   def update

@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   def set_auth_token
-    self.salt = BCrypt::Engine.generate_salt
-    self.auth_token = BCrypt::Engine.hash_secret(SecureRandom.hex, salt)
+    self.auth_token = BCrypt::Engine.hash_secret(SecureRandom.hex, BCrypt::Engine.generate_salt)
   end
 end
