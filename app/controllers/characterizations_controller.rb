@@ -19,6 +19,7 @@ class CharacterizationsController < ApplicationController
   end
 
   def create
+    @user = User.find(params[:user_id])
     @characterization = Characterization.new(characterization_params)
     @characterization.save
     respond_with(@characterization)
