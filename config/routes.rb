@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :characterizations, except: [:destroy]
+  resources :characterizations, only: [:index, :create, :show]
   #devise_for :users
   #devise_for :users, :controllers => {registrations: 'registrations'}
   devise_for :users, controllers: {passwords: "users/passwords", confirmations: 'users/confirmations'}
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'characterizations#index'
+  #root 'characterizations#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

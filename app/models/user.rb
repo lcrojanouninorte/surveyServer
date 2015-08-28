@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :characterizations, dependent: :destroy
+  belongs_to :characterization, dependent: :destroy
   before_create :set_auth_token
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
