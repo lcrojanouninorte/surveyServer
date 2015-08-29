@@ -2,7 +2,11 @@ class CharacterizationsController < ApplicationController
   before_action :set_characterization, only: [:show, :edit, :update, :destroy]
 
   def index
-    @characterizations = Characterization.all
+    if not params[:user_id]
+      @characterizations = Characterization.all
+    else
+      @characterizations = Characterization.find_by_user_id(params[:user_id])
+    end
     render json: @characterizations
   end
 
