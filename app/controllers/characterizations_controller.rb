@@ -1,4 +1,5 @@
-class CharacterizationsController < ApplicationController
+class CharacterizationsController < ApiController
+  before_filter :api_authenticate_user!
   before_action :set_characterization, only: [:show, :edit, :update, :destroy]
 
   def index
