@@ -7,7 +7,12 @@ class CharacterizationsController < ApplicationController
     else
       @characterizations = Characterization.find_by_user_id(params[:user_id])
     end
-    render json: @characterizations
+      if params[:callback]
+      render json: @characterizations , :callback => params[:callback] 
+    else
+      render json: @characterizations  
+    end
+   
   end
 
   def show
