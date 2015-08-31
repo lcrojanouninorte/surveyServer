@@ -31,6 +31,7 @@ GEM
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.9)
+    bcrypt (3.1.9-x64-mingw32)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -53,7 +54,9 @@ GEM
     minitest (5.8.0)
     orm_adapter (0.5.0)
     pg (0.18.2)
+    pg (0.18.2-x64-mingw32)
     rack (1.5.5)
+    rack-cors (0.4.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.1.8)
@@ -93,12 +96,17 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
 
 DEPENDENCIES
   active_model_serializers
   better_errors
   devise
   pg
+  rack-cors
   rails (= 4.1.8)
   rails-api
   spring
+
+BUNDLED WITH
+   1.10.6
