@@ -4,9 +4,11 @@ class ApplicationController < ActionController::API
 
 	include ActionController::MimeResponds
 
-	before_filter :set_access_control_headers
+config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
 
-def set_access_control_headers
-  headers['Access-Control-Allow-Origin'] = 'http://localhost:3000'
-end
 end
