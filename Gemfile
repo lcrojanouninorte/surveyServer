@@ -15,7 +15,7 @@ gem 'devise'
 
 gem 'active_model_serializers'
 
-gem 'rack-cors', :require => 'rack/cors'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
