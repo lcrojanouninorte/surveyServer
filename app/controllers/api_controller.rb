@@ -4,7 +4,7 @@ class ApiController < ActionController::Base
 
   def authenticated_user?
     authenticate_with_http_token do |token, options|
-
+      puts "kevinaqui"
       @_current_user = User.find_by(auth_token: token)
 
       @_current_user.present?
