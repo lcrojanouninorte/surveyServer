@@ -1,5 +1,5 @@
 class UsersController < ApiController
-  before_filter :api_authenticate_user!
+  #before_filter :api_authenticate_user!, only: [:update]
   wrap_parameters :user, include: [:email, :password, :password_confirmation]
 
   def index
