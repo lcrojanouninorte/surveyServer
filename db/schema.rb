@@ -1,3 +1,17 @@
+Skip to content
+This repository  
+Pull requests
+Issues
+Gist
+ @lcrojanouninorte
+ Unwatch 2
+  Star 0
+  Fork 1
+kevinagu/surveyServer
+Branch: master  surveyServer/db/schema.rb
+@kevinagukevinagu 3 days ago primeros avances
+1 contributor
+RawBlameHistory     146 lines (139 sloc)  3.969 kB
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -143,3 +157,5 @@ ActiveRecord::Schema.define(version: 20150828043327) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
+Status API Training Shop Blog About Pricing
+© 2015 GitHub, Inc. Terms Privacy Security Contact Help
