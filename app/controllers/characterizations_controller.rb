@@ -9,13 +9,9 @@ class CharacterizationsController < ApiController
     else
       @characterizations = Characterization.find_by_user_id(params[:user_id])
     end
-<<<<<<< HEAD
-    if params[:callback]
-=======
 
     if params[:callback]
 
->>>>>>> e3d16fe47b7bba9b8cc7bd022ccf20fe350cb5d6
       render json: @characterizations , :callback => params[:callback] 
     else
       render json: @characterizations  
