@@ -12,7 +12,7 @@ class UsersController < ApiController
     end
     render json: @users
   end
-
+ 
 
   def create
   	@user = User.new(user_params)
