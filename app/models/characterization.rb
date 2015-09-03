@@ -10,7 +10,7 @@ class Characterization < ActiveRecord::Base
   end
 
   def s3
-  	@s3 = {:p1 => self.p10, :p2 => self.p11, :p3 => self.p12, :p4 => self.p13, :p5 => self.p14, :p6 => self.p15, :p7 => self.p16, :index => 0}
+  	@s3 = {:p1 => self.p10, :p2 => self.p11, :p3 => self.p12, :p4 => self.p13, :p5 => self.p14, :p6 => self.p15, :p7 => self.p16}
   end
 
   def s4
@@ -30,7 +30,7 @@ class Characterization < ActiveRecord::Base
   end
 
   def s8
-  	@s8 = {:p1 => self.p31, :p2 => self.p32, :p3 => self.p33, :p4 => self.p34, :p5 => self.p35, :p6 => self.p36, :p7 => self.p37, :p8 => self.p38, :p9 => self.p39, :p10 => self.p40, :p11 => self.p41, :p12 => self.p42, :total => 0}
+  	@s8 = {:p1 => self.p31, :p2 => self.p32, :p3 => self.p33, :p4 => self.p34, :p5 => self.p35, :p6 => self.p36, :p7 => self.p37, :p8 => self.p38, :p9 => self.p39, :p10 => self.p40, :p11 => self.p41, :p12 => self.p42}
   end
 
   def s9
