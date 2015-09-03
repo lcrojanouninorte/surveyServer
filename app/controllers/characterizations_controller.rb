@@ -11,7 +11,6 @@ class CharacterizationsController < ApiController
     end
 
     if params[:callback]
-
       render json: @characterizations , :callback => params[:callback] 
     else
       render json: @characterizations  
