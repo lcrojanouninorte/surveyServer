@@ -1,7 +1,8 @@
 class Characterization < ActiveRecord::Base
   belongs_to :user
 
-  def s1	  
+ =begin
+ def s1	  
   	@s1 = {:p1 => self.p1, :p2 => self.p2, :p3 => self.p3, :p4 => self.p4}
   end
 
@@ -44,5 +45,5 @@ class Characterization < ActiveRecord::Base
   def s11
   	@s11 = {:p1 => self.p68, :p2 => self.p69, :p3 => self.p70, :p4 => self.p71, :p5 => self.p72, :p6 => self.p73, :p7 => self.p74, :p8 => self.p75, :p9 => self.p76, :p10 => self.p77, :p11 => self.p78, :p12 => self.p79, :p13 => self.p80, :p14 => self.p81, :p15 => self.p82, :p16 => self.p83, :p17 => self.p84, :p18 => self.p85, :p19 => self.p86, :p20 => self.p87, :p21 => self.p88, :p22 => self.p89, :p23 => self.p90}
   end
-
+=end
 end
