@@ -109,10 +109,9 @@ DEPENDENCIES
   rails (= 4.1.8)
   rails-api
   spring
-<<<<<<< HEAD
+
   tzinfo-data
 
 BUNDLED WITH
    1.10.6
-=======
->>>>>>> c10911c08b2b5123b492079b118da520e956f6a6
+
