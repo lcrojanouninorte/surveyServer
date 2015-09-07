@@ -14,19 +14,19 @@ class Characterization < ActiveRecord::Base
   end
 
   def s4
-  	@s4 = {:p1 => self.p16, :p2 => self.p17, :p3 => self.p18, :p41=>self.p19, :p41=>self.p19 }
+  	@s4 = {:p1 => self.p16, :p2 => self.p17, :p3 => self.p18}
   end
 
   def s5
-  	@s5 = {:p1 => self.p20, :p2 => self.p21, :p3 => self.p22}
+  	@s5 = {:p1 => self.p19, :p2 => self.p20, :p3 => self.p21}
   end
 
    def s6
-  	@s6 = {:p1 => self.p23, :p2 => self.p24, :p3 => self.p25}
+  	@s6 = {:p1 => self.p22, :p2 => self.p23, :p3 => self.p24}
   end
 
   def s7
-  	@s7 = {:p1 => self.p26, :p2 => self.p27, :p3 => self.p28, :p4 => self.p29}
+  	@s7 = {:p1 => self.p25, :p2 => self.p26, :p3 => self.p27, :p4 => self.p28, :p5 => self.p29}
   end
 
   def s8
