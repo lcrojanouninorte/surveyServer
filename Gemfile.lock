@@ -109,9 +109,7 @@ DEPENDENCIES
   rails (= 4.1.8)
   rails-api
   spring
-
   tzinfo-data
 
 BUNDLED WITH
    1.10.6
-
