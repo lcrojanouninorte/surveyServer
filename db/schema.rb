@@ -138,7 +138,6 @@ ActiveRecord::Schema.define(version: 20150828043327) do
     t.string   "p118"
     t.string   "p119"
     t.string   "p120"
-
     t.string   "p121"
     t.string   "p122"
     t.string   "p123"

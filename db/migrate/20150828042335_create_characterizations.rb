@@ -102,7 +102,6 @@ class CreateCharacterizations < ActiveRecord::Migration
       t.string :p98
       t.string :p99
       t.string :p100
-
       t.string :p101
       t.string :p102
       t.string :p103
