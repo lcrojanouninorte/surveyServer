@@ -102,6 +102,26 @@ class CreateCharacterizations < ActiveRecord::Migration
       t.string :p98
       t.string :p99
       t.string :p100
+     t.string   :p101
+     t.string   :p102
+     t.string   :p103
+     t.string   :p104
+     t.string   :p105
+     t.string   :p106
+     t.string   :p107
+     t.string   :p108
+     t.string   :p109
+     t.string   :p110
+     t.string   :p111
+     t.string   :p112
+     t.string   :p113
+     t.string   :p114
+     t.string   :p115
+     t.string   :p116
+     t.string   :p117
+     t.string   :p118
+     t.string   :p119
+     t.string   :p120
 
       t.timestamps
     end
