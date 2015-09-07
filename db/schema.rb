@@ -1,17 +1,3 @@
-Skip to content
-This repository  
-Pull requests
-Issues
-Gist
- @lcrojanouninorte
- Unwatch 2
-  Star 0
-  Fork 1
-kevinagu/surveyServer
-Branch: master  surveyServer/db/schema.rb
-@kevinagukevinagu 3 days ago primeros avances
-1 contributor
-RawBlameHistory     146 lines (139 sloc)  3.969 kB
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -132,9 +118,38 @@ ActiveRecord::Schema.define(version: 20150828043327) do
     t.string   "p98"
     t.string   "p99"
     t.string   "p100"
+    t.string   "p101"
+    t.string   "p102"
+    t.string   "p103"
+    t.string   "p104"
+    t.string   "p105"
+    t.string   "p106"
+    t.string   "p107"
+    t.string   "p108"
+    t.string   "p109"
+    t.string   "p110"
+    t.string   "p111"
+    t.string   "p112"
+    t.string   "p113"
+    t.string   "p114"
+    t.string   "p115"
+    t.string   "p116"
+    t.string   "p117"
+    t.string   "p118"
+    t.string   "p119"
+    t.string   "p120"
+    t.string   "p121"
+    t.string   "p122"
+    t.string   "p123"
+    t.string   "p124"
+    t.string   "p125"
+    t.string   "p126"
+    t.string   "p127"
+    t.string   "p128"
+    t.string   "p129"
+    t.string   "p130"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "finished"
   end
 
   create_table "users", force: true do |t|
@@ -157,5 +172,3 @@ ActiveRecord::Schema.define(version: 20150828043327) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
-Status API Training Shop Blog About Pricing
-© 2015 GitHub, Inc. Terms Privacy Security Contact Help

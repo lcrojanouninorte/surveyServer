@@ -107,6 +107,3 @@ DEPENDENCIES
   rails (= 4.1.8)
   rails-api
   spring
-
-BUNDLED WITH
-   1.10.6
