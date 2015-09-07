@@ -1,17 +1,3 @@
-Skip to content
-This repository  
-Pull requests
-Issues
-Gist
- @lcrojanouninorte
- Unwatch 2
-  Star 0
-  Fork 1
-kevinagu/surveyServer
-Branch: master  surveyServer/db/schema.rb
-@kevinagukevinagu 3 days ago primeros avances
-1 contributor
-RawBlameHistory     146 lines (139 sloc)  3.969 kB
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -153,11 +139,19 @@ ActiveRecord::Schema.define(version: 20150828043327) do
     t.string   "p119"
     t.string   "p120"
 
-
+    t.string   "p121"
+    t.string   "p122"
+    t.string   "p123"
+    t.string   "p124"
+    t.string   "p125"
+    t.string   "p126"
+    t.string   "p127"
+    t.string   "p128"
+    t.string   "p129"
+    t.string   "p130"
 
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "finished"
   end
 
   create_table "users", force: true do |t|
@@ -180,5 +174,3 @@ ActiveRecord::Schema.define(version: 20150828043327) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
-Status API Training Shop Blog About Pricing
-© 2015 GitHub, Inc. Terms Privacy Security Contact Help
