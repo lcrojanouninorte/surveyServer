@@ -17,7 +17,7 @@ class UsersController < ApiController
   def create
   	@user = User.new(user_params)
   	if @user.save
-      UserMailer.recovery_password(@user).deliver
+      UserMailer.recovery_password(@user, user_params[:password]).deliver
   		render json: @user, status: :ok
       
   	else
@@ -34,15 +34,13 @@ class UsersController < ApiController
     end
   end
 
-  def recovery
-    user = User.find_by_email(params[:email])
+  def delete
+    user = User.find(params[:id])
     if user
-      UserMailer.recovery_password(@user).deliver
-    else
-      puts "jajajajjajaj"
+      user.destroy
+      render json: user, status: :ok
     end
   end
-
   private
 
   def user_params

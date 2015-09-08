@@ -9,9 +9,10 @@ Rails.application.routes.draw do
 
   #resources :users, only: [:create]
   post 'users/signup', :to => 'users#create'
+  delete 'users/delete', :to => 'users#delete'
   post 'session/signin', :to => 'sessions#create'
   get 'users', :to=> 'users#index'
-  post "users/recovery_password", :to => 'users#recovery'
+  #post "users/recovery_password", :to => 'users#recovery'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
