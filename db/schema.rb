@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150828043327) do
+ActiveRecord::Schema.define(version: 20150908043709) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -148,7 +148,6 @@ ActiveRecord::Schema.define(version: 20150828043327) do
     t.string   "p128"
     t.string   "p129"
     t.string   "p130"
-
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -167,8 +166,12 @@ ActiveRecord::Schema.define(version: 20150828043327) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "auth_token"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
   end
 
+  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 

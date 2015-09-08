@@ -1,4 +1,4 @@
-class Users::PasswordsController < Devise::PasswordsController
+class PasswordsController < Devise::PasswordsController
   def update
     self.resource = resource_class.reset_password_by_token(resource_params)
     yield resource if block_given?
