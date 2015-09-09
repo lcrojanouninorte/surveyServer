@@ -1,0 +1,7 @@
+Axlsx::Package.new do |p|
+  p.workbook.add_worksheet(:name => "Pie Chart") do |sheet|
+      sheet.add_row ['Cover', 'Sheet']
+  end
+  p.serialize('simple.xlsx')
+end
+

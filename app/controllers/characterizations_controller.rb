@@ -50,6 +50,17 @@ class CharacterizationsController < ApiController
     respond_with(@characterization)
   end
 
+  def download
+   
+    @characterizations = Characterization.all
+    
+    
+    render :xlsx => "/views/characterizations/download.xlsx"
+
+    #send_file("#{Rails.root}/tmp/basic.xlsx", filename: "Basic.xlsx", type: "application/vnd.ms-excel")
+
+  end
+
   private
     def set_characterization
       @characterization = Characterization.find(params[:id])
