@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     get '/confirmation-getting-started' => 'registrations#getting_started', as: 'confirmation_getting_started'
   end
-
+  get 'surveys/download', :to => 'characterizations#download'
   #resources :users, only: [:create]
   post 'users/signup', :to => 'users#create'
   delete 'users/delete', :to => 'users#delete'

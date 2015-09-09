@@ -50,6 +50,17 @@ class CharacterizationsController < ApiController
     respond_with(@characterization)
   end
 
+  def download
+   
+    @characterizations = Characterization.all
+    Rails.logger.debug "account: #{@characterizations.count}"
+    #render 'characterizations'
+    render :xlsx => "/views/characterizations/download.xlsx"
+    #render xlsx: 'characterizations', template: 'characterizations/download.xlsx'
+    #render xlsx: "/views/characterizations/download.xlsx", filename: "my_new_filename.xlsx"
+
+  end
+
   private
     def set_characterization
       @characterization = Characterization.find(params[:id])
