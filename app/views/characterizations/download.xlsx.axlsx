@@ -1,6 +1,9 @@
 Axlsx::Package.new do |p|
   p.workbook.add_worksheet(:name => "Pie Chart") do |sheet|
-      sheet.add_row ['Cover', 'Sheet']
+     sheet.add_row ["p1", "p2", "p3", "p4", "p5", "p6"]
+      @characterizations.each do |st|
+      sheet.add_row [st.p1, st.p2, st.p3, st.p4, st.p5, st.p6]
+     end
   end
   p.serialize('simple.xlsx')
 end

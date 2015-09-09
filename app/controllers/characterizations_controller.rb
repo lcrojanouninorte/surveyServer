@@ -53,7 +53,7 @@ class CharacterizationsController < ApiController
   def download
    
     @characterizations = Characterization.all
-    
+    Rails.logger.debug "account: #{@characterizations.count}"
     
     render :xlsx => "/views/characterizations/download.xlsx"
 
