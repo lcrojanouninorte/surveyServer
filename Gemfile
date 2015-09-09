@@ -1,14 +1,13 @@
 source 'https://rubygems.org'
 
 
-gem 'rails', '4.2.8'
+gem 'rails', '4.1.8'
 
 gem 'rails-api'
 
 gem 'spring', :group => :development
 
-gem "better_errors", :group => :development
-
+ 
 gem 'pg'
 
 gem 'devise'
@@ -19,6 +18,11 @@ gem 'active_model_serializers'
 
 gem 'rack-cors', :require => 'rack/cors'
 gem 'tzinfo-data'
+
+gem 'axlsx'
+
+ 
+ 
 
 
 # To use ActiveModel has_secure_password
