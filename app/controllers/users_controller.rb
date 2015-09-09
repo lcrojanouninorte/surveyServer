@@ -17,7 +17,9 @@ class UsersController < ApiController
   def create
   	@user = User.new(user_params)
   	if @user.save
+      UserMailer.recovery_password(@user, user_params[:password]).deliver
   		render json: @user, status: :ok
+      
   	else
   		render json: @user, status: :unprocessable_entity
   	end
@@ -32,6 +34,13 @@ class UsersController < ApiController
     end
   end
 
+  def delete
+    user = User.find(params[:id])
+    if user
+      user.destroy
+      render json: user, status: :ok
+    end
+  end
   private
 
   def user_params
