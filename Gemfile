@@ -20,13 +20,6 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'tzinfo-data'
 
 gem 'axlsx'
-<<<<<<< HEAD
-
- 
- 
-
-=======
->>>>>>> 2b987df51e87382b35280c8971c02d673b03a95a
 
 gem 'acts_as_xlsx'
 
