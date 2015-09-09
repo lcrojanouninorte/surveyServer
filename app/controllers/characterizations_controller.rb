@@ -54,10 +54,10 @@ class CharacterizationsController < ApiController
    
     @characterizations = Characterization.all
     Rails.logger.debug "account: #{@characterizations.count}"
-    
+    #render 'characterizations'
     render :xlsx => "/views/characterizations/download.xlsx"
-
-    #send_file("#{Rails.root}/tmp/basic.xlsx", filename: "Basic.xlsx", type: "application/vnd.ms-excel")
+    #render xlsx: 'characterizations', template: 'characterizations/download.xlsx'
+    #render xlsx: "/views/characterizations/download.xlsx", filename: "my_new_filename.xlsx"
 
   end
 
