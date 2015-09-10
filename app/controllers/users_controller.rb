@@ -17,7 +17,7 @@ class UsersController < ApiController
   def create
   	@user = User.new(user_params)
   	if @user.save
-      UserMailer.recovery_password(@user, user_params[:password]).deliver
+      #UserMailer.recovery_password(@user, user_params[:password]).deliver
   		render json: @user, status: :ok
       
   	else
