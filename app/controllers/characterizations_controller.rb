@@ -3,7 +3,6 @@ class CharacterizationsController < ApiController
   before_action :set_characterization, only: [:show, :edit, :update, :destroy]
 
   def index
-    puts "kevinddadda"
     if not params[:user_id]
       @characterizations = Characterization.all
     else
@@ -51,14 +50,9 @@ class CharacterizationsController < ApiController
   end
 
   def download
-   
     @characterizations = Characterization.all
-    Rails.logger.debug "account: #{@characterizations.count}"
-    #render 'characterizations'
-    render :xlsx => "/views/characterizations/download.xlsx"
-    #render xlsx: 'characterizations', template: 'characterizations/download.xlsx'
-    #render xlsx: "/views/characterizations/download.xlsx", filename: "my_new_filename.xlsx"
-
+    #--render :xlsx => "/views/characterizations/download.xlsx"
+    render xlsx: "/views/characterizations/download.xlsx", filename: "report_instrumento_#{Time.now.strftime("%d_%m_%Y_%H%M")}.xlsx"
   end
 
   private
