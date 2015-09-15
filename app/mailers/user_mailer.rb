@@ -6,4 +6,9 @@ class UserMailer < ActionMailer::Base
     @password = user.password
     mail(to: @user.email, subject: 'Recordatorio de Contraseña')
   end
+
+  def password_reset(user)
+  	@user = user
+    mail(to: @user.email, subject: 'Recordatorio de Contraseña')
+  end
 end

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  #resources :password_resets, only: [:create, :update]
+
   resources :characterizations, only: [:index, :create, :show]
   #devise_for :users
   #devise_for :users, :controllers => {registrations: 'registrations'}
@@ -13,6 +15,9 @@ Rails.application.routes.draw do
   post 'session/signin', :to => 'sessions#create'
   get 'users', :to=> 'users#index'
 
+  post 'password/reset', :to => 'password_resets#create'
+  put 'password/reset', :to => 'password_resets#update'
+  #post "users/recovery_password", :to => 'users#recovery'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
