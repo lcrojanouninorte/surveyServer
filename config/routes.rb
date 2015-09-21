@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :imi_answers, only: [:index, :create, :show]
+  resources :referrers, only: [:index, :create, :show]
+
   #resources :password_resets, only: [:create, :update]
 
   resources :characterizations, only: [:index, :create, :show]
@@ -8,7 +11,12 @@ Rails.application.routes.draw do
   devise_scope :user do
     get '/confirmation-getting-started' => 'registrations#getting_started', as: 'confirmation_getting_started'
   end
+  get 'imi', :to => 'imi_answers#index'
+  post 'imi', :to => 'imi_answers#create'
+  get 'icai', :to => 'characterizations#index'
+  post 'icai', :to => 'characterizations#create'
   get 'surveys/download', :to => 'characterizations#download'
+  post 'referrers', :to => 'referrers#create'
   #resources :users, only: [:create]
   post 'users/signup', :to => 'users#create'
   delete 'users/delete', :to => 'users#delete'
