@@ -3,6 +3,7 @@ class CharacterizationsController < ApiController
   before_action :set_characterization, only: [:show, :edit, :update, :destroy]
 
   def index
+    
     if not params[:user_id]
       @characterizations = Characterization.all
     else

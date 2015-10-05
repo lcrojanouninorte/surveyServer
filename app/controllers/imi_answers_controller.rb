@@ -9,9 +9,9 @@ class ImiAnswersController < ApiController
     end
 
     if params[:callback]
-      render json: @imiAnswer , :callback => params[:callback] 
+      render json: @imiAnswer , :callback => params[:callback] , root: "answers"  
     else
-      render json: @imiAnswer  
+      render json: @imiAnswer , root: "answers"  
     end
    
   end
@@ -33,13 +33,13 @@ class ImiAnswersController < ApiController
     if not @imiAnswer
       @imiAnswer = ImiAnswer.new(imiAnswer_params)
       if @imiAnswer.save
-       render json: @imiAnswer, status: :ok
+       render json: @imiAnswer, status: :ok, root: "answers"  
       else
-       render json: @imiAnswer, status: :unprocessable_entity
+       render json: @imiAnswer, status: :unprocessable_entity, root: "answers"  
       end  
     else
       @imiAnswer.update(imiAnswer_params)
-      render json: @imiAnswer
+      render json: @imiAnswer, root: "answers"  
     end  
   end
 

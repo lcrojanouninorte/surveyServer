@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
+  Rails.application.routes.draw do
   resources :imi_answers, only: [:index, :create, :show]
   resources :referrers, only: [:index, :create, :show]
 
