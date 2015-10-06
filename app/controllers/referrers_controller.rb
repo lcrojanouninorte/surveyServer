@@ -34,7 +34,7 @@ class ReferrersController < ApiController
       ActiveRecord::Base.transaction do
         @referrers.each do |referrer|
         puts referrer 
-          @referr = Referrer.create(user_id: referrer["user_id"], nombre: referrer["nombre"], mail: referrer["mail"], empresa: referrer["empresa"])
+          @referr = Referrer.create(user_id: referrer["user_id"], nombre: referrer["nombre"], mail: referrer["mail"], empresa: referrer["empresa"], tel:  referrer["tel"])
           if @referr
           else
             sw = false;
@@ -67,7 +67,7 @@ class ReferrersController < ApiController
     end
 
     def referrer_params
-      params.permit(referrers:[:user_id, :nombre,  :empresa, :mail])
+      params.permit(referrers:[:user_id, :nombre,  :empresa, :mail, :tel])
     end
 end
 
