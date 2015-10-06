@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: MyString
+  user_id: MyString
+  created_at: MyString
+  updated_at: MyString
+  p1: MyString
+  p2: MyString
+  p3: MyString
+  p4: MyString
+  p5: MyString
+  p6: MyString
+  p7: MyString
+  p8: MyString
+  p9: MyString
+  p10: MyString
+  p11: MyString
+  p12: MyString
+  p13: MyString
+  p14: MyString
+  p15: MyString
+  p16: MyString
+  p17: MyString
+  p18: MyString
+  p19: MyString
+  p20: MyString
+
+two:
+  id: MyString
+  user_id: MyString
+  created_at: MyString
+  updated_at: MyString
+  p1: MyString
+  p2: MyString
+  p3: MyString
+  p4: MyString
+  p5: MyString
+  p6: MyString
+  p7: MyString
+  p8: MyString
+  p9: MyString
+  p10: MyString
+  p11: MyString
+  p12: MyString
+  p13: MyString
+  p14: MyString
+  p15: MyString
+  p16: MyString
+  p17: MyString
+  p18: MyString
+  p19: MyString
+  p20: MyString

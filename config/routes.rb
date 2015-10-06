@@ -1,4 +1,5 @@
   Rails.application.routes.draw do
+  resources :inst_aux1s, except: [:new, :edit]
   resources :imi_answers, only: [:index, :create, :show]
   resources :referrers, only: [:index, :create, :show]
 
@@ -19,6 +20,7 @@
   post 'referrers', :to => 'referrers#create'
   #resources :users, only: [:create]
   post 'users/signup', :to => 'users#create'
+  post 'users/update', :to => 'users#update'
   delete 'users/delete', :to => 'users#delete'
   post 'session/signin', :to => 'sessions#create'
   get 'users', :to=> 'users#index'
