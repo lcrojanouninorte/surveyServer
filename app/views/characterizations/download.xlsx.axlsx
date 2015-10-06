@@ -6,7 +6,7 @@ wb.styles do |s|
     date = s.add_style(:format_code => "dd-mm-yyyy hh:mm", :border => Axlsx::STYLE_THIN_BORDER)
    
 
-	wb.add_worksheet(name: "Intrumento") do |sheet|
+	wb.add_worksheet(name: "ICAI") do |sheet|
 		sheet.add_row ["created_at","updated_at", "email","Id de usuario","p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8", "p9", "p10", "p11", "p12", "p13", "p14", "p15", "p16", "p17", "p18", "p19", "p20", "p21", "p22", "p23", "p24", "p25", "p26", "p27", "p28", "p29", "p30", "p31", "p32", "p33", "p34", "p35", "p36", "p37", "p38", "p39", "p40", "p41", "p42", "p43", "p44", "p45", "p46", "p47", "p48", "p49", "p50", "p51", "p52", "p53", "p54", "p55", "p56", "p57", "p58", "p59", "p60", "p61", "p62", "p63", "p64", "p65", "p66", "p67", "p68", "p69", "p70", "p71", "p72", "p73", "p74", "p75", "p76", "p77", "p78", "p79", "p80", "p81", "p82", "p83", "p84", "p85", "p86", "p87", "p88", "p89", "p90", "p91", "p92", "p93", "p94", "p95", "p96", "p97", "p98", "p99", "p100", "p100", "p101", "p102", "p103", "p104", "p105", "p106", "p107", "p108", "p109", "p110", "p111", "p112", "p113", "p114", "p115", "p116", "p117", "p118"], :style => yellow_cell
 
 	  @characterizations.each do |st|
@@ -27,5 +27,14 @@ wb.styles do |s|
 	  @referrers.each do |st|
 	    sheet.add_row [st.user.id,st.user.email,st.nombre,st.empresa,st.mail, st.created_at, st.updated_at],:style => [nil,nil,nil,nil,nil,date, date]
 	  end
+	end
+	wb.add_worksheet(name: "MiINDEX") do |sheet|
+		sheet.add_row ["created_at","updated_at", "email","Id de usuario","p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8", "p9", "p10", "p11", "p12", "p13", "p14", "p15", "p16", "p17", "p18", "p19", "p20", "estado"], :style => yellow_cell
+
+	  @mindex.each do |st|
+	    sheet.add_row [st.created_at,st.updated_at,st.user.email,st.user_id, st.p1, st.p2, st.p3, st.p4, st.p5, st.p6, st.p7, st.p8, st.p9, st.p10, st.p11, st.p12, st.p13, st.p14, st.p15, st.p16, st.p17, st.p18, st.p19, st.p20, st.status], :style => [date, date, nil, nil,nil, nil]
+	  end
+	  sheet["A1:D1"].each { |c|  c.style = yellow_cell }
+      sheet['E1:Y1'].each { |c| c.style = green_cell }
 	end
 end

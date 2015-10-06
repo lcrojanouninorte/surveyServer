@@ -51,9 +51,10 @@ class CharacterizationsController < ApiController
   end
 
   def download
-    @characterizations = Characterization.all
+   @characterizations = Characterization.all
    @users=User.all
    @referrers=Referrer.all
+   @mindex=ImiAnswer.all
     #--render :xlsx => "/views/characterizations/download.xlsx"
     render xlsx: "/views/characterizations/download.xlsx", filename: "report_instrumento_#{Time.now.strftime("%d_%m_%Y_%H%M")}.xlsx"
   end
